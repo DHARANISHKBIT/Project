@@ -13,11 +13,12 @@ const pricingItems = [
 
 function PricingTable() {
   return (
-    <div style={{ width:'30%',height:'80%',padding:"2%",display:'flex',flexDirection:'column',borderRadius:'10px' }}>
-      <Typography variant="h6" sx={{ fontWeight: 'bold',height:'10%',display:'flex',alignItems:'center' }}>
+    <div style={{ width:'94%',height:'96%',padding:"2%",display:'flex',flexDirection:'column',borderRadius:'10px' }}>
+      <Typography variant="h6" sx={{ fontWeight: 'bold',height:'10%',display:'flex',alignItems:'center',borderBottom:'1px solid gray' }}>
         Pricing Table
       </Typography>
-
+      <div style={{height:'90%',padding:"2% 0",display:'flex',flexDirection:'column',justifyContent:'space-evenly',width:'100%',alignItems:'center',
+            }}>
       {pricingItems.map((item) => (
         <Box
           key={item.id}
@@ -28,10 +29,11 @@ function PricingTable() {
             borderRadius: '8px',
             backgroundColor: item.color,
             marginBottom: '12px',
-            height:'90%',
-            width:'100%',
+            height:'12%',
+            width:'92%',
             boxShadow: '0 1px 4px rgba(0, 0, 0, 0.1)',
-            padding:'1%'
+            padding:'1%',
+            gap:'15px',
           }}
         >
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -55,7 +57,6 @@ function PricingTable() {
               {item.label}
             </Typography>
           </Box>
-
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <IconButton aria-label="info" sx={{ color: '#888' }}>
               <InfoOutlinedIcon />
@@ -64,8 +65,8 @@ function PricingTable() {
           </Box>
         </Box>
       ))}
+      </div>
     </div>
   );
 }
-
 export default PricingTable;

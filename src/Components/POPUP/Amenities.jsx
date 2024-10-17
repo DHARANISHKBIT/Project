@@ -23,35 +23,37 @@ const Amen =[
 ]
 function Amenities() {
   return (
-    <div style={{height:'76%',width:"26%",padding:'1% 2%',border:'1px solid gray',borderRadius:'5px'}}>
+    <div style={{height:'96%',width:"95%",padding:'1% 2%',borderRadius:'5px',display:'flex',flexDirection:'column',alignItems:'center'}}>
       <Box sx={{width:'100%',
-        height:'5%',
+        height:'7%',
         display:'flex',
         justifyContent:'space-between',
-        borderBottom:'1px solid gray'
+        borderBottom:'1px solid gray',
+        alignItems:'center'
       }}>
-        <Typography>Add Amenities</Typography>
+        <Typography sx={{fontWeight:'600'}}>Add Amenities</Typography>
         <CloseIcon/>
       </Box>
       <Box sx={{
-        width:'98%',
+        width:'90%',
         height:'8%',
         display:'flex',
         marginTop:'15px',
         justifyContent:'space-between',
         border:'1px solid gray',
         alignItems:'center',
-        padding:'0 1%',
+        padding:'1% 4%',
         borderRadius:'5px',
-        backgroundColor: "rgb(235, 235, 184)",
+        backgroundColor: "#fef4f4",
+        color:'#c89b94'
       }}>
         <div style={{width:'60%',display:'flex',gap:'5px'}}>
       <CabinIcon />
-      <Typography  sx={{color:'orange'}}>05 Total Amenities</Typography>
+      <Typography >05 Total Amenities</Typography>
         </div>
       <Typography>$ 200.00</Typography>
       </Box>
-      <Typography  sx={{marginTop:'10px'}}>Available Amenities</Typography>
+      <Typography  sx={{marginTop:'10px',width:'100%',textAlign:'start'}}>Available Amenities</Typography>
       <div className='Amen-page'>
         {Amen.map((item,index)=>
         (
@@ -66,7 +68,7 @@ function Amenities() {
             padding:'1%',
             border:'1px solid gray'
           }}>
-            <img  src={item.img} style={{width:'13%',height:'70%',borderRadius:'5px'}}/>
+            <img  src={item.img} style={{width:'11%',height:'72%',borderRadius:'5px'}}/>
             <div className='Amen-name'>
               <div>{item.name}</div>
               <div className='price-date'>

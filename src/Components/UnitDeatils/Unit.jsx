@@ -10,6 +10,7 @@ import AddIcon from '@mui/icons-material/Add';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import Amenpopup from '../POPUP/Amenpopup.jsx'
 import Princingpopup from '../POPUP/Princingpopup.jsx'
 
 const house = [
@@ -21,6 +22,7 @@ const house = [
 
 function Unit() {
   const [princingPopup, setprincingPopup] = useState(false);
+  const [AmenPopup, setAmenPopup] = useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -70,15 +72,14 @@ function Unit() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={() => { handleClose(); setprincingPopup(true); }}>Add Pricing Component</MenuItem>
+        <MenuItem onClick={() => {setprincingPopup(true)}}>Add Pricing Component</MenuItem>
         {princingPopup && <Princingpopup onClose={() => setprincingPopup(false)} />}
-        <MenuItem onClick={handleClose}>Add Amenities</MenuItem>
-        <MenuItem onClick={handleClose}>Add Utilies</MenuItem>
-        <MenuItem onClick={handleClose}>Add Discount</MenuItem>
-        <MenuItem onClick={handleClose}>Remove Component</MenuItem>
-      
+        <MenuItem onClick={() => {setAmenPopup(true)}}>Add Amenities</MenuItem>
+        {AmenPopup && <Amenpopup onClose={() => setAmenPopup(false)} />}
+        <MenuItem onClick={() => {setprincingPopup(true)}}>Add Utilies</MenuItem>
+        <MenuItem onClick={() => {setprincingPopup(true)}}>Add Discount</MenuItem>
+        <MenuItem onClick={() => {setprincingPopup(true)}}>Remove Component</MenuItem>
       </Menu>
-    
               </div>
             </Box>
           </Grid>
@@ -88,5 +89,4 @@ function Unit() {
     </div>
   );
 }
-
 export default Unit;

@@ -2,7 +2,7 @@ import * as React from 'react';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import Slide from '@mui/material/Slide';
-import Princing from './Princing.jsx'
+import Amenities from './Amenities';
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -33,15 +33,15 @@ export default function Notipopup(props) {
             padding: 0,
           },
           '& .MuiPaper-root': {
-            width: '500px', 
-            height: '620px',
+            width: '430px', 
+            height: '680px',
             display:'flex',
           },
         }}
         aria-describedby="alert-dialog-slide-description"
       >
         <DialogContent>
-          <Princing />
+          <Amenities />
         </DialogContent>
       </Dialog>
     </React.Fragment>

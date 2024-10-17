@@ -8,6 +8,7 @@
     gap: 10px;
     overflow-y: scroll;
     scrollbar-width: none;
+    padding: 2% 0%;
    
 }
 .Amen-full{
@@ -21,10 +22,12 @@
     flex-direction: column;
     justify-content: space-evenly;
     padding: 0 2%;
+    font-weight: 500;
 
 }
 .price-date{
-    width: 100%;
+    width: 90%;
+    font-size: 12px;
     display: flex;
     justify-content: space-between;
 }
