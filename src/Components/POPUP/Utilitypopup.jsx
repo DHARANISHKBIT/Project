@@ -2,7 +2,7 @@ import * as React from 'react';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import Slide from '@mui/material/Slide';
-import Amenities from './Amenities';
+import Utility from './Utility.jsx'
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -40,7 +40,7 @@ export default function Notipopup(props) {
         aria-describedby="alert-dialog-slide-description"
       >
         <DialogContent>
-          <Amenities />
+          <Utility />
         </DialogContent>
       </Dialog>
     </React.Fragment>

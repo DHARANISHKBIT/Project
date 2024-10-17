@@ -11,6 +11,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Amenpopup from '../POPUP/Amenpopup.jsx'
+import Utility from '../POPUP/Utilitypopup.jsx'
 import Princingpopup from '../POPUP/Princingpopup.jsx'
 
 const house = [
@@ -23,11 +24,16 @@ const house = [
 function Unit() {
   const [princingPopup, setprincingPopup] = useState(false);
   const [AmenPopup, setAmenPopup] = useState(false);
+  const [UtiPopup, setUtiPopup] = useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+  
+
+
+
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -76,11 +82,15 @@ function Unit() {
         {princingPopup && <Princingpopup onClose={() => setprincingPopup(false)} />}
         <MenuItem onClick={() => {setAmenPopup(true)}}>Add Amenities</MenuItem>
         {AmenPopup && <Amenpopup onClose={() => setAmenPopup(false)} />}
-        <MenuItem onClick={() => {setprincingPopup(true)}}>Add Utilies</MenuItem>
+        <MenuItem onClick={() => {setUtiPopup(true)}}>Add Utilies</MenuItem>
+        {UtiPopup && <Utility onClose={() => setUtiPopup(false)} />}
         <MenuItem onClick={() => {setprincingPopup(true)}}>Add Discount</MenuItem>
         <MenuItem onClick={() => {setprincingPopup(true)}}>Remove Component</MenuItem>
       </Menu>
               </div>
+
+
+        
             </Box>
           </Grid>
         ))}
