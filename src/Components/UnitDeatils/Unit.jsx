@@ -12,6 +12,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Amenpopup from '../POPUP/Amenpopup.jsx'
 import Utility from '../POPUP/Utilitypopup.jsx'
+import { FaBed, FaBath, FaHome } from "react-icons/fa";
 import Princingpopup from '../POPUP/Princingpopup.jsx'
 
 const house = [
@@ -30,10 +31,6 @@ function Unit() {
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-  
-
-
-
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -54,9 +51,22 @@ function Unit() {
                 <Typography sx={{ fontSize: '15px', color: 'gray' }}>{item.sq}</Typography>
               </div>
               <div className='icons'>
-                <div><AirlineSeatFlatOutlinedIcon /> </div>
-                <div><BathtubIcon /> </div>
-                <div><HomeOutlinedIcon /> </div>
+              <div className="property-details">
+      <div className="detail-item">
+        <FaBed className="icon" />
+        <span>2</span>
+      </div>
+      <div className="separator">•</div>
+      <div className="detail-item">
+        <FaBath className="icon" />
+        <span>2</span>
+      </div>
+      <div className="separator">•</div>
+      <div className="detail-item">
+        <FaHome className="icon" />
+        <span>2BHK</span>
+      </div>
+    </div>
               </div>
               <div className='cus'>             
       <Button
@@ -88,9 +98,6 @@ function Unit() {
         <MenuItem onClick={() => {setprincingPopup(true)}}>Remove Component</MenuItem>
       </Menu>
               </div>
-
-
-        
             </Box>
           </Grid>
         ))}

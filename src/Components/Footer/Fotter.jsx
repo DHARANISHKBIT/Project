@@ -8,7 +8,7 @@ export default function BasicButtons() {
         <div style={{width:'90%',display:'flex',justifyContent:'space-between'}}>
       <Button variant="outlined" sx={{color:'black'}}>Privious</Button>
       <div style={{width:'21%',display:'flex',justifyContent:'space-between'}}>
-      <Button variant="outlined" sx={{color:'black'}}>Privious</Button>
+      <Button variant="outlined" sx={{color:'black'}}>Cancel</Button>
       <Button variant="contained">Create Quation</Button>
       </div>
       </div>
