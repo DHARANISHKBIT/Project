@@ -31,3 +31,96 @@
     display: flex;
     justify-content: space-between;
 }
+
+
+
+
+/* ----------DIscount------------------ */
+.Discount-page{
+    height: 98%;
+    width: 100%;
+    /* background-color: red; */
+}
+.left-right{
+    height: 90%;
+    width: 100%;
+    display: flex;
+}
+.left-side{
+    width: 46%;
+    height: 99%;
+    padding: 2%;
+}
+.name{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    height: 20%;
+    align-items: center;
+}
+.button-dis{
+    height: 100%;
+    font-size: 13px;
+    width: 30%;
+    background-color: #F5F7FA;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+.property-detail {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    width: 80%;
+    justify-content: space-evenly;
+    color: #b0b0b0;
+  }
+  
+  .detail-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .icon {
+    font-size: 20px;
+  }
+  
+  .separator {
+    margin: 0 10px;
+    color: #d0d0d0;
+  }
+  
+  span {
+    font-size: 16px;
+  }
+  .right-side{
+    width: 50%;
+    height: 100%;
+    padding:  1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+  }
+  .right-page{
+    height: 98%;
+    width: 95%;
+    background-color: rgb(238, 237, 237);
+    border-radius: 5px;
+    padding: 2% 2%;
+    margin-top: 4%;
+  }
+  .last-box{
+    width: 93%;
+    height: 4%;
+    align-items: center;
+    margin-top: 2%;
+    padding: 2%;
+    border-radius: 5px;
+    display: flex;
+    font-weight: 600;
+    
+    justify-content: space-between;
+    background-color: rgb(200, 198, 198);
+  }

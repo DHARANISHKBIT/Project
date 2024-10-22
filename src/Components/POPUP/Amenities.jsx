@@ -91,8 +91,8 @@ function Amenities() {
       </div>
       <div style={{height:'10%',display:'flex',alignItems:'center',width:'100%',justifyContent:'center'}}>
 
-<Stack  direction="row" spacing={2} >
-<Button variant="contained" >Update & Save</Button>
+<Stack  direction="row" spacing={2} sx={{width:"100%"}}>
+<Button variant="contained" sx={{width:'100%'}}>Update & Save</Button>
 </Stack>
 </div>
     </div>
