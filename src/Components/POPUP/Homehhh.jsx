@@ -14,27 +14,27 @@ const pricing = [
     { billName: 'Bill Name Here', price: '$1,000' },
     { billName: 'Bill Name Here', price: '$1,000' },
   ];
-
 function Discount() {
   return (
     <div className='Discount-page'>
      <Box sx={{width:'96%',height:'7%',display:'flex',alignItems:'center',justifyContent:'space-between',borderBottom:'1px solid gray',padding: "0 2%"}}>
-        <Typography>Add Discount To Unit</Typography>
+        <Typography sx={{fontSize:'16px',fontWeight:'bold'}}>Add Discount To Unit</Typography>
         <CloseIcon/>
         </Box>
      <div className='left-right'>
       <div className='left-side'>
-        <Box sx={{width:'100%',height:'30%',
-        display:'flex'
+        <Box sx={{width:'100%',height:'30%',display:'flex'
         }}>
             <img  
             src={House}
              style={{
                 width:'55%',
-                height:'98%',
-                borderRadius:'10px'
+                height:'95%',
+                borderRadius:'10px',
+                display:'flex',
+                alignItems:'center'
             }}/>
-            <Box sx={{ width: '100%', height: '100%',padding:'1%'}}>
+            <Box sx={{ width: '100%', height: '100%',padding:'0 1%'}}>
       <Grid container spacing={1} sx={{height:'100%'}}>
         <Grid item xs={6}>
           <img 
@@ -86,7 +86,7 @@ function Discount() {
         <Box sx={{width:'100%',height:'15%',padding:'3% 0%',display:'flex',flexDirection:'column',justifyContent:'space-around',
     borderBottom:'1px solid gray'}}>
             <div className='name'>
-            <Typography sx={{fontWeight:'600',fontSize:'20px'}}>Jumeirah Estate</Typography>
+            <Typography sx={{fontWeight:'bold',fontSize:'18px'}}>Jumeirah Estate</Typography>
             <div className='button-dis'>
                 UNT-1234
             </div>
@@ -110,7 +110,7 @@ function Discount() {
       <div className="separator">•</div>
       <div className="detail-item">
         < CheckBoxOutlineBlankIcon className="icon" />
-        <span>2000 Sq.Ft</span>
+        <span>2000</span>
       </div>
     </div>
         </Box>
@@ -128,14 +128,14 @@ function Discount() {
       <div className='right-side'>
         <div className='right-page'>
 
-      <div style={{ marginBottom: '10px',fontSize:'18px',fontWeight:'600'}}>UNIT PRICE DEATIL</div>
+      <div style={{ marginBottom: '10px',fontSize:'14px',fontWeight:'bold'}}>UNIT PRICE DEATIL</div>
       <ul style={{ listStyleType: 'none', padding: '0', margin: '0',width:'100%',height:'85%',overflowY:'scroll',scrollbarWidth:'none'}}>
         {pricing.map((item, index) => (
             <li 
             key={index} 
             style={{ 
                 padding: '10px 0', 
-                borderBottom: '1px solid gray', 
+                borderBottom: '1px solid #98A0AC', 
                 width:'96%',
                 height:'13%',
                 padding:'2%',
@@ -146,7 +146,8 @@ function Discount() {
             >
                <div  style={{ 
                 display: 'flex', 
-                justifyContent: 'space-between', }}>
+                justifyContent: 'space-between', color:'#4E5A6B',
+                fontWeight:'600' }}>
                     <div>
               <strong>{item.billName}</strong>
               {item.discount && (

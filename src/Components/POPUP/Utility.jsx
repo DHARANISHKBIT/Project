@@ -30,10 +30,10 @@ function Amenities() {
         height:'7%',
         display:'flex',
         justifyContent:'space-between',
-        borderBottom:'1px solid gray',
+        borderBottom:'1px solid #E4E8EE',
         alignItems:'center'
       }}>
-        <Typography sx={{fontWeight:'600'}}>Add Amenities</Typography>
+        <Typography sx={{fontWeight:'600'}}>Add Utility</Typography>
         <CloseIcon/>
       </Box>
       <Box sx={{
@@ -42,20 +42,19 @@ function Amenities() {
         display:'flex',
         marginTop:'15px',
         justifyContent:'space-between',
-        border:'1px solid gray',
         alignItems:'center',
         padding:'1% 4%',
         borderRadius:'5px',
-        backgroundColor: "#fef4f4",
+        backgroundColor: "#DBF0F180",
         color:'#c89b94'
       }}>
         <div style={{width:'60%',display:'flex',gap:'5px'}}>
-      <PhotoFilterIcon/>
-      <Typography >05 Total Amenities</Typography>
+      <PhotoFilterIcon sx={{color:'#6DAFB3'}}/>
+      <Typography sx={{color:'#6DAFB3'}}>05 Total Amenities</Typography>
         </div>
-      <Typography>$ 200.00</Typography>
+      <Typography sx={{color:'#6DAFB3'}}>$ 200.00</Typography>
       </Box>
-      <Typography  sx={{marginTop:'10px',width:'100%',textAlign:'start'}}>Available Utility</Typography>
+      <Typography  sx={{marginTop:'10px',width:'100%',textAlign:'start',fontSize:'14px',color:'#98A0AC'}}>Available Utility</Typography>
       <div className='Amen-page'>
         {Amen.map((item,index)=>
         (
@@ -67,11 +66,11 @@ function Amenities() {
             display:'flex',
             alignItems:'center',
             padding:'1%',
-            border:'1px solid gray'
+            border:'1px solid #E4E8EE'
           }}>
             <img  src={item.img} style={{width:'11%',height:'72%',borderRadius:'5px'}}/>
             <div className='Amen-name'>
-              <div>{item.name}</div>
+              <div style={{fontSize:'16px',color:'#091B29',fontWeight:'600'}}>{item.name}</div>
               <div className='price-date'>
                 <div>$ {item.price}</div>
                 <div>{item.date}</div>

@@ -1,7 +1,6 @@
 .Amen-page{
     height: 70%;
     width: 100%;
-    /* background-color: yellow; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,7 +28,9 @@
     width: 90%;
     font-size: 12px;
     display: flex;
+    font-weight: 600;
     justify-content: space-between;
+    color: #4E5A6B;
 }
 
 
@@ -55,25 +56,29 @@
     display: flex;
     width: 60%;
     justify-content: space-between;
-    height: 20%;
+    height: 22%;
     align-items: center;
 }
 .button-dis{
     height: 100%;
     font-size: 13px;
-    width: 30%;
+    width: 33%;
     background-color: #F5F7FA;
     display: flex;
     justify-content: center;
     border-radius: 5px;
+    font-size: 12px;
+    align-items: center;
+    color: #98A0AC;
 }
 .property-detail {
     display: flex;
     align-items: center;
     font-size: 16px;
-    width: 80%;
+    width: 90%;
     justify-content: space-evenly;
     color: #b0b0b0;
+    /* background-color: blue; */
   }
   
   .detail-item {
@@ -106,7 +111,7 @@
   .right-page{
     height: 98%;
     width: 95%;
-    background-color: rgb(238, 237, 237);
+    background-color: #F8F9FB;
     border-radius: 5px;
     padding: 2% 2%;
     margin-top: 4%;
@@ -122,5 +127,5 @@
     font-weight: 600;
     
     justify-content: space-between;
-    background-color: rgb(200, 198, 198);
+    background-color: rgb(226, 223, 223);
   }

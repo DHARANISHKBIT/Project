@@ -5,7 +5,7 @@ function Header() {
   return (
     <div className='first-line'>
       <div>Add Contact</div>
-      <div style={{display:'flex',height:'100%',alignItems:'center'}}><KeyboardArrowRightOutlinedIcon/></div>
+      <div style={{display:'flex',height:'100%',alignItems:'center',fontSize:'1px'}}><KeyboardArrowRightOutlinedIcon/></div>
       <div style={{display:'flex',height:'100%',alignItems:'center'}}>Lead Details</div>
       <div style={{display:'flex',height:'100%',alignItems:'center'}}><KeyboardArrowRightOutlinedIcon/></div>
       <div style={{display:'flex',height:'100%',alignItems:'center'}}>Preview and Create Lead</div>

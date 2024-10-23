@@ -8,6 +8,28 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import { styled } from '@mui/material/styles';
+import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
+
+const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
+  height: 10,
+  borderRadius: 5,
+  [`&.${linearProgressClasses.colorPrimary}`]: {
+    backgroundColor: theme.palette.grey[200],
+    ...theme.applyStyles('dark', {
+      backgroundColor: theme.palette.grey[800],
+    }),
+  },
+  [`& .${linearProgressClasses.bar}`]: {
+    borderRadius: 5,
+    backgroundColor: '#1a90ff',
+    ...theme.applyStyles('dark', {
+      backgroundColor: '#308fe8',
+    }),
+  },
+}));
+
+
 
 function Primary({setOpenPri}) {
     const [age, setAge] = React.useState('');
@@ -18,10 +40,11 @@ function Primary({setOpenPri}) {
   return (
     <div className='primary-page'>
       <Box sx={{
-        width:'96%',
+        width:'90%',
         backgroundColor:'#FEEAEA80',
-        padding:'1% 0',
+        padding:'1% 2%',
         display:'flex',
+        font:'bold',
         height:'6%',
         borderRadius:'5px',
         marginTop:'20px',
@@ -33,7 +56,7 @@ function Primary({setOpenPri}) {
       </Box>
       <Box sx={{width:'96%',height:'10%',padding:'5%',display:'flex',justifyContent:'space-evenly'}}>
         <Box sx={{width:'48%'}}> 
-        <Typography sx={{fontSize:'15px',color:'gray'}}>Revenue Type</Typography>
+        <Typography sx={{fontSize:'12px',color:'#98A0AC'}}>Revenue Type</Typography>
         <Stack spacing={1} direction="row" sx={{marginTop:'10px'}}>
       <Button variant="contained">Lease</Button>
       <Button variant="outlined">Sales</Button>
@@ -41,7 +64,7 @@ function Primary({setOpenPri}) {
     </Stack>
         </Box>
         <Box sx={{width:'48%'}}>
-        <Typography sx={{fontSize:'15px',color:'gray'}}>Princing Component</Typography>
+        <Typography sx={{fontSize:'12px',color:'#98A0AC'}}>Princing Component</Typography>
         <FormControl sx={{ m: 1, minWidth: 225 }} size="small">
         <InputLabel sx={{color:'black'}}>Princing Component</InputLabel>
       <Select
@@ -55,9 +78,9 @@ function Primary({setOpenPri}) {
       </Box>
       <Box sx={{width:'96%',height:'10',display:'flex',justifyContent:'space-between',padding:'2% 0%'}}>
         <Box sx={{width:'48%'}}>
-        <Typography sx={{fontSize:'13px',color:'gray',width:'100%'}}>Tax Group For Princing Component</Typography>
+        <Typography sx={{fontSize:'12px',color:'#98A0AC',width:'100%'}}>Tax Group For Princing Component</Typography>
         <FormControl sx={{ m: 1, minWidth: 225 }} size="small">
-        <InputLabel sx={{color:'black'}}>GST</InputLabel>
+        <InputLabel sx={{color:'black',fontSize:'12px'}}>GST</InputLabel>
       <Select
          labelId="demo-simple-select-label"
          id="demo-simple-select"
@@ -69,7 +92,7 @@ function Primary({setOpenPri}) {
     </FormControl>
         </Box>
         <Box sx={{width:'48%'}}>
-        <Typography sx={{fontSize:'13px',color:'gray'}}>Component Based On</Typography>
+        <Typography sx={{fontSize:'12px',color:'#98A0AC'}}>Component Based On</Typography>
         <Stack spacing={1} direction="row" sx={{marginTop:'10px'}}>
       <Button variant="contained">Amount</Button>
       <Button variant="outlined">UOM</Button>
@@ -77,7 +100,7 @@ function Primary({setOpenPri}) {
     </Box>
       </Box>
       <Box width={{width:'90%',height:'16%',marginTop:'15px'}}>
-      <Typography sx={{fontSize:'14px',color:'gray'}}>UOM Value</Typography>
+      <Typography sx={{fontSize:'12px',color:'#98A0AC'}}>UOM Value</Typography>
       <Box sx={{
         width:'96%',
         backgroundColor:'#FEEAEA80',
@@ -92,22 +115,33 @@ function Primary({setOpenPri}) {
             <div style={{color:'#CED3DD'}}>SAR/Total</div>
       </Box>
       </Box>
-        <Box sx={{width:'90%',height:"15%",display:'flex',justifyContent:'space-between',color:'gray',fontSize:'14px'}}>
+
+
+        <Box sx={{width:'90%',height:"20%",display:'flex',justifyContent:'space-between',color:'gray',fontSize:'14px'}}>
             <Box sx={{width:'30%'}}>
-        <Typography>Maximum</Typography>
+        <Typography sx={{fontSize:"12px"}}>Maximum</Typography>
+        <Stack spacing={2} sx={{ flexGrow: 1 }}>
+      <BorderLinearProgress variant="determinate" value={100} sx={{backgroundColor:'red'}}/>
+    </Stack>
         <Stack spacing={1} direction="row" sx={{marginTop:'10px',width:'100%'}}>
       <Button variant="outlined" sx={{width:"100%",color:'black'}}>$ 190</Button>
     </Stack>
             </Box>
             <Box sx={{width:'30%'}}>
 
-    <Typography>Recommended</Typography>
+    <Typography sx={{fontSize:"12px"}}>Recommended</Typography>
+    <Stack spacing={2} sx={{ flexGrow: 1 }}>
+      <BorderLinearProgress variant="determinate" value={75} sx={{backgroundColor:'red'}}/>
+    </Stack>
         <Stack spacing={1} direction="row" sx={{marginTop:'10px',width:'100%'}}>
       <Button variant="outlined" sx={{width:"100%",color:'black'}}>$ 190</Button>
     </Stack>
             </Box>
             <Box sx={{width:'30%'}}>
-    <Typography>Minimum</Typography>
+    <Typography sx={{fontSize:"12px"}}>Minimum</Typography>
+    <Stack spacing={2} sx={{ flexGrow: 1 }}>
+      <BorderLinearProgress variant="determinate" value={30} sx={{backgroundColor:'red'}}/>
+    </Stack>
         <Stack spacing={1} direction="row" sx={{marginTop:'10px',width:'100%'}}>
       <Button variant="outlined" sx={{width:"100%",color:'black'}}>$ 190</Button>
     </Stack>

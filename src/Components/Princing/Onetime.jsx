@@ -18,9 +18,9 @@ function Seconary({setOpenPri}) {
   return (
     <div className='primary-page'>
       <Box sx={{
-        width:'96%',
+        width:'90%',
         backgroundColor:'#EDE4FE80',
-        padding:'1% 0',
+        padding:'1% 2%',
         display:'flex',
         height:'6%',
         borderRadius:'5px',
@@ -33,19 +33,19 @@ function Seconary({setOpenPri}) {
       </Box>
       <Box sx={{width:'96%',height:'10%',padding:'5%',display:'flex',justifyContent:'start'}}>
         <Box sx={{width:'48%'}}> 
-        <Typography sx={{fontSize:'15px',color:'gray'}}>Revenue Type</Typography>
+        <Typography sx={{fontSize:'12px',color:'#98A0AC'}}>Revenue Type</Typography>
         <Stack spacing={1} direction="row" sx={{marginTop:'10px'}}>
-      <Button variant="contained">Lease</Button>
-      <Button variant="outlined">Sales</Button>
-      <Button variant="outlined">Manage</Button>
-      <Button variant="outlined">Stay</Button>
+      <Button variant="contained"  sx={{textTransform:'none'}}>Lease</Button>
+      <Button variant="outlined"  sx={{textTransform:'none'}}>Sales</Button>
+      <Button variant="outlined"  sx={{textTransform:'none'}}>Manage</Button>
+      <Button variant="outlined"  sx={{textTransform:'none'}}>Stay</Button>
     </Stack>
         </Box>
       
       </Box>
       <Box sx={{width:'96%',height:'10',display:'flex',justifyContent:'space-between',padding:'2% 0%'}}>
       <Box sx={{width:'48%'}}>
-        <Typography sx={{fontSize:'15px',color:'gray'}}>Princing Component</Typography>
+        <Typography sx={{fontSize:'12px',color:'#98A0AC'}}>Princing Component</Typography>
         <FormControl sx={{ m: 1, minWidth: 225 }} size="small">
         <InputLabel sx={{color:'black'}}>Princing Component</InputLabel>
       <Select
@@ -57,7 +57,7 @@ function Seconary({setOpenPri}) {
     </FormControl>
         </Box>
         <Box sx={{width:'48%'}}>
-        <Typography sx={{fontSize:'13px',color:'gray',width:'100%'}}>Tax Group For Princing Component</Typography>
+        <Typography sx={{fontSize:'12px',color:'#98A0AC',width:'100%'}}>Tax Group For Princing Component</Typography>
         <FormControl sx={{ m: 1, minWidth: 225 }} size="small">
         <InputLabel sx={{color:'black'}}>GST</InputLabel>
       <Select
@@ -73,23 +73,23 @@ function Seconary({setOpenPri}) {
       </Box>
       <Box width={{width:'100%',height:'16%',marginTop:'15px',display:'flex'}}>
       <Box sx={{width:'44%',padding:'0% 3%'}}>
-        <Typography sx={{fontSize:'13px',color:'gray'}}>Component Based On</Typography>
+        <Typography sx={{fontSize:'12px',color:'#98A0AC'}}>Component Based On</Typography>
         <Stack spacing={1} direction="row" sx={{marginTop:'10px'}}>
-      <Button variant="contained">Yes</Button>
-      <Button variant="outlined">No</Button>
+      <Button variant="contained"  sx={{textTransform:'none'}}>Yes</Button>
+      <Button variant="outlined"  sx={{textTransform:'none'}}>No</Button>
     </Stack>
     </Box>
       <Box sx={{width:'44%',padding:'0% 3%'}}>
-        <Typography sx={{fontSize:'13px',color:'gray'}}>Component Based On</Typography>
+        <Typography sx={{fontSize:'12px',color:'#98A0AC'}}>Component Based On</Typography>
         <Stack spacing={1} direction="row" sx={{marginTop:'10px'}}>
-      <Button variant="contained">Amount</Button>
-      <Button variant="outlined">UOM</Button>
-      <Button variant="outlined">%</Button>
+      <Button variant="contained"  sx={{textTransform:'none'}}>Amount</Button>
+      <Button variant="outlined"  sx={{textTransform:'none'}}>UOM</Button>
+      <Button variant="outlined"  sx={{textTransform:'none'}}>%</Button>
     </Stack>
     </Box>
       </Box>
       <Box width={{width:'90%',height:'16%',marginTop:'15px'}}>
-      <Typography sx={{fontSize:'14px',color:'gray'}}>UOM Value</Typography>
+      <Typography sx={{fontSize:'12px',color:'#98A0AC'}}>UOM Value</Typography>
       <Box sx={{
         width:'96%',
         backgroundColor:'#FEEAEA80',
@@ -107,13 +107,12 @@ function Seconary({setOpenPri}) {
        
         <Box sx={{height:'10%',width:'90%',display:'flex',justifyContent:'space-between'}}>
         <Stack spacing={1} direction="row" sx={{marginTop:'10px',width:'20%',height:'70%'}}>
-      <Button variant="outlined" sx={{width:"100%",color:'black'}} onClick={()=> setOpenPri(false)}>Back</Button>
+      <Button variant="outlined" sx={{width:"100%",color:'black',textTransform:'none'}} onClick={()=> setOpenPri(false)}>Back</Button>
     </Stack>
     <Stack spacing={0} direction="row" sx={{marginTop:'10px',width:'60%',height:'70%'}}>
-      <Button variant="contained" sx={{width:"100%",color:'black',height:'100%',color:'white',fontSize:'13px'}}>Create Princing Component</Button>
+      <Button variant="contained" sx={{width:"100%",color:'black',height:'100%',color:'white',fontSize:'13px',textTransform:'none'}}>Create Princing Component</Button>
     </Stack>
-        </Box>
-      
+        </Box> 
     </div>
   )
 }

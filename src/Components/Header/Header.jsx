@@ -17,11 +17,11 @@ function Header() {
     <Box className='Header'>
         <Box className='Head-left'>
       <ArrowBackIosIcon sx={{width: "18px"}}/>
-      <Typography sx={{fontSize:'20px',marginTop:'-3px'}}>Create Quotation To Existing Lead</Typography>
+      <Typography sx={{fontSize:'16px',color:'#071741',fontWeight:'600'}}>Create Quotation To Existing Lead</Typography>
       </Box>
      
-       <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-      <InputLabel id="demo-select-small-label">Casagrand</InputLabel>
+       <FormControl sx={{ m: 1, minWidth: 120,color:'#F5F7FA'}} size="small">
+      <InputLabel id="demo-select-small-label" sx={{fontSize:'14px',color:'#010101'}}>Casagrand</InputLabel>
       <Select
         labelId="demo-select-small-label"
         id="demo-select-small"
@@ -30,7 +30,6 @@ function Header() {
         onChange={handleChange}
       >
         <MenuItem value="">
-          <em>Casagrand</em>
         </MenuItem>
         <MenuItem value={10}>Casagrand</MenuItem>
         <MenuItem value={20}>Casagrand</MenuItem>
